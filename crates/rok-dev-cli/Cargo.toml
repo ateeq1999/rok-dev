@@ -1,0 +1,23 @@
+[package]
+name = "rok-dev-cli"
+description = "rok-dev: run a project's stack (`rok dev`, `rok run`, `rok doctor`, `rok port`) from rok.toml's [dev] tables"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+readme = "../../README.md"
+keywords = ["cli", "dev-server", "process", "supervisor", "developer-tools"]
+categories = ["command-line-utilities", "development-tools"]
+
+[lints]
+workspace = true
+
+[[bin]]
+name = "rok-dev"
+path = "src/main.rs"
+
+[dependencies]
+clap = { workspace = true }

@@ -1,0 +1,28 @@
+[workspace]
+resolver = "3"
+members = ["crates/rok-dev-cli"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/ateeq1999/rok-dev"
+homepage = "https://github.com/ateeq1999/rok-dev"
+rust-version = "1.94"
+authors = ["The rok-dev Contributors"]
+
+[workspace.dependencies]
+clap = "4"
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+missing_docs = "warn"
+missing_debug_implementations = "warn"
+unreachable_pub = "warn"
+
+[workspace.lints.clippy]
+dbg_macro = "warn"
+todo = "warn"
+
+[profile.release]
+strip = "debuginfo"
